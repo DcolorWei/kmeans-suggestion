@@ -1,0 +1,18 @@
+{
+  "name": "kmeans-suggestion",
+  "version": "0.1.0",
+  "description": "a tool for calculating the result of suggestion with kmeans algorithm",
+  "main": "index.js",
+  "files": ["lib/**/*"],
+  "keywords": [
+    "math",
+    "kmeans",
+    "suggestion"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "dcolor",
+  "license": "ISC"
+}
