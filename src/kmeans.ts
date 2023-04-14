@@ -13,6 +13,9 @@ export class Coordinate {
 
 //K-means聚类
 export function kmeans(data: Array<Coordinate>, k: number): { clusters: Array<Array<Coordinate>>, means: Array<Coordinate> } {
+    if (data.length < k) {
+        throw new Error(`the length of data (${data.length}) is smaller than the value of k (${k}), please check)`);
+    }
     //means是一个坐标对象数组，代表聚类中心
     let means: Array<Coordinate> = initMeans(data, k);
     //clusters是一个二维数组，每个元素是一个数组，数组中存放的是属于该类的数据点
@@ -34,7 +37,9 @@ export function kmeansSHT(data: Array<Coordinate>): { clusters: Array<Array<Coor
     const silhouetteList: Array<number> = [];
     let last = -1;
     let k = 1;
-
+    if (data.length < 2) {
+        throw new Error(`the length of data (${data.length}) is too small, please check)`);
+    }
     while (++k < data.length) {
         let { clusters, means } = kmeans(data, k);
         for (let i = 0; i < data.length; i++) {
