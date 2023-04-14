@@ -7,7 +7,8 @@
   "borwser": "dist/umd/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -m CommonJS --outDir dist/cjs && tsc -m es6 --outDir dist/esm && webpack"
+    "build": "tsc -m CommonJS --outDir dist/cjs && tsc -m es6 --outDir dist/esm && webpack",
+    "publish": "npm publish --access public"
   },
   "files": [
     "dist/**/*"
