@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./lib",
-    "strict": true,
+    "module": "es2015",
+    "target": "es5",
     "lib": [
-      "es6"
-    ]
+      "es2015",
+      "dom"
+    ],
+    "declaration": true,
+    "declarationDir": "dist/types"
   },
   "include": [
-    "src"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
