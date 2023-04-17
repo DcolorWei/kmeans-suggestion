@@ -1,10 +1,18 @@
 {
   "name": "kmeans-suggestion",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "a tool for calculating the result of suggestion with kmeans algorithm",
   "main": "/dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "borwser": "dist/umd/index.js",
+  "umd:main": "dist/umd/index.js",
+  "types": "dist/types/index.d.ts",
+  "typesVersions": {
+    ">=3.1": {
+      "*": [
+        "ts3.1/*"
+      ]
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -m CommonJS --outDir dist/cjs && tsc -m es6 --outDir dist/esm && webpack",
